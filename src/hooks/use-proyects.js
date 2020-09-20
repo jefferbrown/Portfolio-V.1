@@ -8,13 +8,17 @@ const useProyects = () => {
           titulo
           contenido
           indexfoto {
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 600) {
               ...GatsbyDatoCmsFluid
             }
           }
           code {
             titulo
+            avatarcode {
+              url
+            }
           }
+          urlpage
         }
       }
     }
@@ -25,6 +29,7 @@ const useProyects = () => {
     contenido: proyects.contenido,
     indexfoto: proyects.indexfoto,
     code: proyects.code,
+    urlpage: proyects.urlpage,
   }))
 }
 
