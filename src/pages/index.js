@@ -21,7 +21,7 @@ const IndexPage = () => {
           <title>{title} - Portfolio</title>
           <meta name="description" content={description} />
         </Helmet>
-        <ContenidoIndex color="gray" />
+        <ContenidoIndex />
         <div className="container mx-auto text-center w-full">
           <i className="fas fa-arrow-down animate-bounce  text-gray-500 text-2xl"></i>
         </div>

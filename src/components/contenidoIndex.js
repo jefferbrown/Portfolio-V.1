@@ -4,7 +4,7 @@ import Header from "./header"
 
 import useCodes from "../hooks/use-codes"
 
-const ContenidoIndex = ({ color }) => {
+const ContenidoIndex = () => {
   const proyects = useCodes()
   const [openTab, setOpenTab] = React.useState(1)
   const informacion = useStaticQuery(graphql`
@@ -35,11 +35,11 @@ const ContenidoIndex = ({ color }) => {
     profesion,
     nombre,
     contenido,
-
     avatar,
     banner,
   } = informacion.allDatoCmsUsuario.nodes[0]
 
+  const color = "gray"
   return (
     <>
       <Header transparent />
@@ -165,8 +165,8 @@ const ContenidoIndex = ({ color }) => {
                             </div>
                             <div className="mt-5 pt-5 border-t border-gray-300 text-center">
                               <div className="flex flex-wrap justify-center">
-                                <div className="w-full lg:w-9/12 px-4 ">
-                                  <p className="italic text-bold text-md leading-relaxed text-gray-800">
+                                <div className="w-full lg:w-10/12 px-4">
+                                  <p className="italic text-bold text-sm leading-relaxed text-gray-800">
                                     <span className="text-xl">"</span>
                                     {contenido}
                                     <span className="text-xl">"</span>
@@ -179,8 +179,8 @@ const ContenidoIndex = ({ color }) => {
                             className={openTab === 2 ? "block" : "hidden"}
                             id="link2"
                           >
-                            <h1 className="text-center   lg:pt-6 text-3xl  font-bold text-gray-800 mb-2 uppercase ">
-                              Conocimientos
+                            <h1 className="text-center   lg:pt-6 text-3xl  font-bold text-gray-500 mb-2 uppercase ">
+                              Skills
                             </h1>
                             <div className=" py-4   pt-6 pb-8 grid grid-cols-5 sm:grid-cols-6 md:grid-cols-9 xl:grid-cols-11 gap-2 p-2 ">
                               {proyects.map(skill => {
